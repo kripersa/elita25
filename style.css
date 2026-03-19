@@ -1,0 +1,81 @@
+:root {
+    --primary-navy: #0B1D39;
+    --accent-red: #FF0000;
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+    --border-color: #e2e8f0;
+}
+
+body {
+    background-color: #ffffff;
+    background-image: radial-gradient(var(--border-color) 1px, transparent 1px);
+    background-size: 25px 25px; /* წერტილოვანი ფონი */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.text-red { color: var(--accent-red); }
+
+/* ნავიგაცია */
+.navbar {
+    background: var(--light-gray);
+    border-bottom: 2px solid var(--border-color);
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-content { display: flex; justify-content: space-between; align-items: center; }
+.logo-img { width: 120px; height: au; transition: 0.3s; }
+.logo-link:hover .logo-img { transform: scale(1.05); }
+
+.nav-links { display: flex; list-style: none; gap: 35px; }
+.nav-links a { text-decoration: none; color: var(--primary-navy); font-weight: 700; font-size: 14px; text-transform: uppercase; transition: 0.3s; }
+.nav-links a:hover { color: var(--accent-red); }
+
+/* ჰერო */
+.hero { padding: 140px 0; text-align: center; background: white; }
+.hero h1 { font-size: clamp(32px, 5vw, 52px); font-weight: 800; line-height: 1.2; margin-bottom: 30px; letter-spacing: -1px; }
+.hero-description { font-size: 19px; color: #475569; max-width: 850px; margin: 0 auto 50px; }
+.hero-btns { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+
+.btn-main { background: var(--primary-navy); color: white; padding: 18px 36px; text-decoration: none; font-weight: 700; border-radius: 4px; transition: 0.3s; }
+.btn-main:hover { background: var(--accent-red); }
+
+.btn-outline { border: 2px solid var(--primary-navy); color: var(--primary-navy); padding: 16px 34px; text-decoration: none; font-weight: 700; border-radius: 4px; transition: 0.3s; }
+.btn-outline:hover { background: var(--primary-navy); color: white; }
+
+/* მომსახურებები */
+.services { padding: 80px 0; }
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
+.service-card { padding: 50px 40px; background: var(--light-gray); border-radius: 16px; border: 1px solid var(--border-color); transition: 0.4s ease; }
+.service-card:hover { transform: translateY(-12px); border-color: var(--accent-red); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
+.service-icon { font-size: 45px; margin-bottom: 25px; }
+.service-card h3 { font-size: 26px; font-weight: 800; margin-bottom: 20px; color: var(--primary-navy); }
+
+/* პროექტები */
+.projects { padding: 80px 0; }
+.section-title { font-size: clamp(28px, 4vw, 38px); font-weight: 800; text-align: center; margin-bottom: 60px; }
+.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+.project-card { background: var(--white); border: 1px solid var(--border-color); border-radius: 12px; overflow: hidden; transition: 0.3s; display: flex; flex-direction: column; }
+.project-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+.project-image { height: 260px; background-color: #cbd5e1; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+
+/* კონტაქტი */
+.contact-simple { padding: 100px 0; }
+.contact-box { background: var(--light-gray); padding: 80px 40px; border-radius: 20px; border: 1px solid var(--border-color); text-align: center; margin: 0 auto; max-width: 1100px; }
+.contact-details { display: flex; justify-content: space-around; gap: 30px; flex-wrap: wrap; margin-top: 40px; }
+.contact-item { flex: 1; min-width: 250px; }
+.label { display: block; font-weight: 700; color: var(--accent-red); text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+.value { font-size: 22px; font-weight: 800; color: var(--primary-navy); text-decoration: none; transition: 0.3s; }
+.value:hover { color: var(--accent-red); }
+
+.footer { text-align: center; padding: 60px; color: #64748b; border-top: 1px solid var(--border-color); }
+
+.fade-in { animation: fadeIn 1s ease-out; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
